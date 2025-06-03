@@ -1,50 +1,50 @@
 # WEB PORTOFOLIO FITRA PUTRA ALDI WIJAYA
 
-Portfolio website built with React + Vite showcasing projects, skills, and experience.
+Website portofolio yang dibangun dengan React + Vite untuk menampilkan proyek, keterampilan, dan pengalaman.
 
-## Features
+## Fitur
 
-- Modern UI with responsive design
-- Project showcase with filtering (Web, Aplikasi, IoT, Keamanan Siber)
-- Skills and experience sections
-- Contact form
-- Animated components with Intersection Observer
-- Mobile-friendly layout
+- UI modern dengan desain responsif
+- Showcase proyek dengan fitur filter (Web, Aplikasi, IoT, Keamanan Siber)
+- Bagian keterampilan dan pengalaman
+- Formulir kontak
+- Komponen dengan animasi menggunakan Intersection Observer
+- Tata letak yang ramah perangkat mobile
 
-## Projects
+## Proyek
 
-- **Fashion Store App**: E-commerce fashion app with modern UI
-- **Movie App**: Film streaming app with TMDB API integration
-- **Monitoring Kolam App**: IoT system for water quality monitoring
-- **Flutter Location**: Location tracking app with Google Maps API
-- **Website Himpunan**: Student association web portal
-- **CI/CD Projects**: DevOps implementation with GitHub Actions and Jenkins
-- **Robot Pembersih Otomatis**: Smart home IoT system
+- **Fashion Store App**: Aplikasi e-commerce fashion dengan UI modern
+- **Movie App**: Aplikasi streaming film dengan integrasi API TMDB
+- **Monitoring Kolam App**: Sistem IoT untuk monitoring kualitas air kolam
+- **Flutter Location**: Aplikasi pelacakan lokasi dengan Google Maps API
+- **Website Himpunan**: Portal web himpunan mahasiswa
+- **Proyek CI/CD**: Implementasi DevOps dengan GitHub Actions dan Jenkins
+- **Robot Pembersih Otomatis**: Sistem IoT rumah pintar
 
-## Tech Stack
+## Teknologi
 
 - **Frontend**: React, JavaScript, Tailwind CSS
 - **Build Tool**: Vite
-- **Animation**: CSS animations, Intersection Observer API
+- **Animasi**: Animasi CSS, Intersection Observer API
 - **Deployment**: GitHub Pages
 - **Version Control**: Git, GitHub
 
-## Installation
+## Instalasi
 
 ```bash
-# Clone the repository
+# Clone repositori
 git clone https://github.com/aldiputraa/WEB_PORTOFOLIO_FITRA-PUTRA-ALDI-WIJAYA.git
 
-# Navigate to project directory
+# Masuk ke direktori proyek
 cd WEB_PORTOFOLIO_FITRA-PUTRA-ALDI-WIJAYA
 
-# Install dependencies
+# Instal dependensi
 npm install
 
-# Start development server
+# Jalankan server pengembangan
 npm run dev
 ```
 
-## Contact
+## Kontak
 
 GitHub: [aldiputraa](https://github.com/aldiputraa)
