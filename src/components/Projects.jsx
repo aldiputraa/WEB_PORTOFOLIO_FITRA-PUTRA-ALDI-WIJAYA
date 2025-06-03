@@ -109,6 +109,16 @@ function Projects() {
       category: "iot",
       liveLink: "#",
       codeLink: "https://github.com/aldiputraa/monitoring-kolam-app"
+    },
+    {
+      id: 9,
+      title: "Web Portofolio",
+      description: "Website portofolio personal dengan UI modern, animasi interaktif, dan showcase proyek dengan fitur filter kategori",
+      image: "../../assets/proyek/web PORTOFOLIO.png",
+      tags: ["React", "Vite", "Tailwind CSS", "JavaScript", "Responsive Design"],
+      category: "web",
+      liveLink: "#",
+      codeLink: "https://github.com/aldiputraa/WEB_PORTOFOLIO_FITRA-PUTRA-ALDI-WIJAYA"
     }
   ];
 
@@ -179,19 +189,7 @@ function Projects() {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <div className="flex gap-4 -translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
-                    <a 
-                      href={project.liveLink} 
-                      className="bg-primary-500 hover:bg-primary-600 text-white p-3 rounded-full transform transition-transform duration-300 hover:scale-110"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label="View live demo"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                    </a>
+                  <div className="flex -translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
                     <a 
                       href={project.codeLink} 
                       className="bg-dark-700 hover:bg-dark-600 text-white p-3 rounded-full transform transition-transform duration-300 hover:scale-110"
