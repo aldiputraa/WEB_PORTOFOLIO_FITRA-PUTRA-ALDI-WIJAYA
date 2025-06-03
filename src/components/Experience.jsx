@@ -1,0 +1,234 @@
+import { useState, useEffect, useRef } from 'react'
+
+function Experience() {
+  const [activeTab, setActiveTab] = useState('work');
+  const [isVisible, setIsVisible] = useState(false);
+  const experienceRef = useRef(null);
+  
+  // Intersection Observer to trigger animation when section is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    
+    if (experienceRef.current) {
+      observer.observe(experienceRef.current);
+    }
+    
+    return () => {
+      if (experienceRef.current) {
+        observer.unobserve(experienceRef.current);
+      }
+    };
+  }, []);
+  
+  const tabs = {
+    work: [
+      {
+        title: "CYBERSECURITY: Skill Penting Yang Dibutuhkan Cybersecurity Engineer",
+        company: "PT Gama Multi Usaha Mandiri - Yogyakarta",
+        period: "September 2024 - Desember 2024",
+        description: "1. Virtualization: Installing and configuring VMware, VirtualBox, and Proxmox to simulate virtual environments. 2. Vulnerability Scanning: Using OpenVAS and Arachni to identify vulnerabilities in web applications and networks. 3. Secure Protocol Management: Comparing secure (HTTPS, SSH, SMTPS) and unsecured (HTTP, Telnet, FTP) protocols through wiretapping using Wireshark. 4. Network Segmentation: Implementing VLANs and routing between VLANs using Cisco Packet Tracer. 5. Wireless Security: Using Kismet for site survey and security analysis of Wi-Fi networks. 6. Encryption and Digital Signature: Using PGP for digital signatures and encrypted email communications. 7. Device Management: Installing and testing MDM tools such as Flyve for mobile device management. 8. Hardening Web Server: Configure Apache2-based server to limit access with specific rules according to network needs. 9. Penetration Testing: Conduct testing on web applications owned by the South Sulawesi Province Communication, Informatics, Statistics and Encryption Service using Arachni."
+      },
+      {
+        title: "Warehouse Staff",
+        company: "Telkom Indonesia - Yogyakarta",
+        period: "September 2021",
+        description: "Menjaga kelancaran distribusi serta penataan barang di dalam gudang penyimpanan. Penempatan barang sesuai dengan daftar, data, sekaligus memastikan stock opname berjalan dengan semestinya."
+      },
+      {
+        title: "Management Access Data",
+        company: "Telkom Indonesia - Yogyakarta",
+        period: "September 2021 - November 2021",
+        description: "Melakukan pengecekan dan menyesuaikan data customer, input data, dan tugas lainnya."
+      },
+      {
+        title: "Freelance",
+        company: "SG Computer - Yogyakarta",
+        period: "2021",
+        description: "Menjaga stand pameran dan melakukan instalasi Windows."
+      }
+    ],
+    education: [
+      {
+        title: "S1 Teknik Komputer",
+        institution: "Universitas Teknologi Digital Indonesia (UTDI)",
+        period: "September 2022 - Sekarang",
+        description: "GPA: 3.83/4.00. Pembuatan web himpunan dan project pembuatan IoT."
+      },
+      {
+        title: "Teknik Komputer Jaringan",
+        institution: "SMK N 1 Bantul",
+        period: "Mei 2019 - Juni 2022",
+        description: "Instalasi jaringan komputer, splicing, crimping kabel LAN, konfigurasi mikrotik."
+      }
+    ],
+    organization: [
+      {
+        title: "Ketua Umum",
+        company: "Himpunan Teknik Komputer - HIMATEK",
+        period: "Agustus 2023 - Agustus 2024",
+        description: "Memimpin dan mengelola himpunan mahasiswa, mewakili himpunan dalam berbagai pertemuan, mengkoordinasikan kegiatan, dan memperkuat ikatan kekeluargaan antar mahasiswa Teknik Komputer."
+      },
+      {
+        title: "Departemen Minat dan Bakat",
+        company: "UKM WAMIKA - UTDI",
+        period: "Agustus 2023 - Agustus 2024",
+        description: "Merencanakan, mengatur dan melaksanakan kegiatan yang berkaitan dengan minat dan bakat mahasiswa Islam."
+      },
+      {
+        title: "Penanggung Jawab",
+        company: "Bakti Sosial Panti Asuhan Ulil Albab - Yogyakarta",
+        period: "April 2023",
+        description: "Menyalurkan bantuan kepada masyarakat yang membutuhkan, menumbuhkan kepedulian terhadap sesama, dan menjalin silaturahmi antar anggota."
+      },
+      {
+        title: "Penanggung Jawab",
+        company: "LATIHAN KADER HIMATEK UTDI",
+        period: "November 2023",
+        description: "Melakukan kaderisasi di internal HIMATEK UTDI, mengembangkan keterampilan kepemimpinan, dan membangun rasa identitas anggota."
+      },
+      {
+        title: "Departemen Minat dan Bakat",
+        company: "UKM WAMIKA - UTDI",
+        period: "Agustus 2023 - Agustus 2024",
+        description: "Merencanakan, mengatur dan melaksanakan kegiatan yang berkaitan dengan minat dan bakat mahasiswa Islam."
+      }
+    ]
+  };
+
+  return (
+    <section id="experience" className="py-24 bg-gradient-to-b from-dark-950 to-dark-900" ref={experienceRef}>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center mb-16">
+          <span className={`text-primary-400 font-medium mb-2 tracking-wider ${isVisible ? 'animate-slideDown' : 'opacity-0'}`}>PENGALAMAN SAYA</span>
+          <h2 className={`font-serif text-4xl md:text-5xl font-bold text-white ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+            Perjalanan Karir
+          </h2>
+          <div className={`w-24 h-1 bg-primary-500 mt-6 rounded-full ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}></div>
+        </div>
+        
+        {/* Tab navigation */}
+        <div className={`flex justify-center mb-12 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+          <div className="inline-flex bg-dark-800 p-1 rounded-xl">
+            <button 
+              onClick={() => setActiveTab('work')} 
+              className={`px-6 py-3 rounded-lg transition-all duration-300 ${activeTab === 'work' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+            >
+              Pekerjaan
+            </button>
+            <button 
+              onClick={() => setActiveTab('education')} 
+              className={`px-6 py-3 rounded-lg transition-all duration-300 ${activeTab === 'education' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+            >
+              Pendidikan
+            </button>
+            <button 
+              onClick={() => setActiveTab('organization')} 
+              className={`px-6 py-3 rounded-lg transition-all duration-300 ${activeTab === 'organization' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+            >
+              Organisasi
+            </button>
+          </div>
+        </div>
+        
+        {/* Timeline content */}
+        <div className={`max-w-4xl mx-auto ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
+          <div className="relative">
+            {tabs[activeTab].map((item, index) => (
+              <div 
+                key={index} 
+                className={`mb-12 ${index % 2 === 0 ? 'lg:ml-auto lg:pl-20 lg:pr-0' : 'lg:mr-auto lg:pr-20 lg:pl-0'} lg:w-1/2 relative`}
+                style={{ animationDelay: `${0.8 + index * 0.2}s` }}
+              >
+                {/* Timeline dot */}
+                <div className="hidden lg:block absolute top-5 w-4 h-4 rounded-full bg-primary-500 shadow-lg shadow-primary-500/20 z-10">
+                  <div className="absolute inset-0 rounded-full bg-primary-500 animate-ping opacity-30"></div>
+                </div>
+                
+                {/* Timeline line */}
+                <div className="hidden lg:block absolute top-0 bottom-0 w-px bg-dark-700 z-0">
+                  <div className="absolute top-5 bottom-0 w-px bg-gradient-to-b from-primary-500/50 to-transparent"></div>
+                </div>
+                
+                {/* Content card */}
+                <div className={`bg-dark-800 p-6 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5 ${index % 2 === 0 ? 'lg:rounded-l-none' : 'lg:rounded-r-none'}`}>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-primary-500/10 text-primary-400 text-sm font-medium rounded-full">{item.period}</span>
+                    <div className="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center text-primary-400">
+                      {activeTab === 'work' && (
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      )}
+                      {activeTab === 'education' && (
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                        </svg>
+                      )}
+                      {activeTab === 'organization' && (
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                  <p className="text-primary-400 font-medium mb-4">{item.company || item.institution}</p>
+                  <p className="text-white/70">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Skills section */}
+        {activeTab === 'work' && (
+          <div className={`mt-16 max-w-4xl mx-auto ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '1.2s' }}>
+            <div className="bg-dark-800 p-8 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5">
+              <h3 className="text-2xl font-serif font-bold text-white mb-6">Keahlian Tambahan</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-bold text-primary-400 mb-4">Soft Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["Manajemen Waktu", "Kerja Tim", "Pemecahan Masalah", "Berbicara di Depan Umum", "Analisis Informasi", "Kreatif & Inovatif"].map((skill, i) => (
+                      <span 
+                        key={i} 
+                        className="bg-dark-700 text-white/80 px-3 py-1 rounded-full text-sm hover:bg-primary-500/20 hover:text-primary-400 transition-colors duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary-400 mb-4">Hard Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["VirtualBox", "Cisco Packet Tracer", "Microsoft Office", "Winbox"].map((skill, i) => (
+                      <span 
+                        key={i} 
+                        className="bg-dark-700 text-white/80 px-3 py-1 rounded-full text-sm hover:bg-primary-500/20 hover:text-primary-400 transition-colors duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  )
+}
+
+export default Experience
