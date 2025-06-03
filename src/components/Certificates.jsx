@@ -50,7 +50,7 @@ function Certificates() {
       date: "2023",
       image: cloudAWS,
       category: "web",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ function Certificates() {
       date: "2023",
       image: sqlCert,
       category: "web",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 3,
@@ -68,7 +68,7 @@ function Certificates() {
       date: "2023",
       image: dataVis,
       category: "web",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 4,
@@ -77,7 +77,7 @@ function Certificates() {
       date: "2023",
       image: pythonCert,
       category: "programming",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 5,
@@ -86,7 +86,7 @@ function Certificates() {
       date: "2023",
       image: kompetensiCert,
       category: "professional",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 6,
@@ -95,7 +95,7 @@ function Certificates() {
       date: "2023",
       image: magangCert,
       category: "professional",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 7,
@@ -104,7 +104,7 @@ function Certificates() {
       date: "2023",
       image: msibCert,
       category: "professional",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 8,
@@ -113,7 +113,7 @@ function Certificates() {
       date: "2023",
       image: keamananCert,
       category: "security",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 9,
@@ -122,7 +122,7 @@ function Certificates() {
       date: "2023",
       image: sertifikatbestgrupmagangCert,
       category: "security",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 10,
@@ -131,7 +131,7 @@ function Certificates() {
       date: "2023",
       image: jointerCert,
       category: "professional",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 11,
@@ -140,7 +140,7 @@ function Certificates() {
       date: "2023",
       image: sertifikathimaCert,
       category: "organisasi",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 12,
@@ -149,7 +149,7 @@ function Certificates() {
       date: "2023",
       image: sertifikatukmwamikaCert,
       category: "organisasi",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
       id: 13,
@@ -158,7 +158,7 @@ function Certificates() {
       date: "2023",
       image: sertifikatseminarKeamananSiberPeluangdanTantanganCert,
       category: "seminar",
-      credentialLink: "#"
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     }
   ];
 
@@ -247,7 +247,7 @@ function Certificates() {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    Lihat Kredensial
+                    Lihat 
                   </a>
                 </div>
                 <div className="absolute top-4 right-4">
