@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.css'
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -53,8 +54,24 @@ function App() {
     );
   }
 
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
+      <Navbar isScrolled={isScrolled} />
       <Hero />
       <About />
       <Skills />
