@@ -90,8 +90,9 @@ function About() {
           
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start">
               <a 
-                href="/assets/resume-fitra-putra-aldi-wijaya.pdf" 
-                download="Resume-Fitra-Putra-Aldi-Wijaya.pdf"
+                href="https://drive.google.com/drive/folders/1OFc8Q5HWhlrkvbub4Rjf0DOehzx1SLNf?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="px-4 sm:px-6 py-2.5 sm:py-3 bg-primary-600 hover:bg-primary-700 text-white text-sm sm:text-base font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary-600/20 focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 focus:ring-offset-dark-900 flex items-center gap-2"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
