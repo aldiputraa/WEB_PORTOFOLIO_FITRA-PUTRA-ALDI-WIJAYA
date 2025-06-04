@@ -100,7 +100,7 @@ Saya selalu berkomitmen untuk terus belajar dan mengikuti perkembangan teknologi
                 {/* Image container */}
                 <div className="relative overflow-hidden rounded-2xl border-2 border-white/10">
                   <img 
-                    src="./assets/profile.jpg" 
+                    src="/assets/profile.jpg" 
                     alt="Fitra Putra Aldi Wijaya" 
                     className="w-full object-cover transition-transform hover:scale-105 duration-700"
                   />
