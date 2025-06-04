@@ -59,7 +59,7 @@ function Experience() {
     ],
     organization: [
       {
-        title: "Ketua Divisi Teknologi",
+        title: "Ketua Umum",
         company: "Himpunan Mahasiswa Teknik Komputer - UTDI",
         period: "September 2023 - Agustus 2024",
         description: "Memimpin tim dalam pengembangan website organisasi, mengelola infrastruktur teknologi untuk kegiatan kampus, dan mengadakan workshop teknologi untuk mahasiswa."
