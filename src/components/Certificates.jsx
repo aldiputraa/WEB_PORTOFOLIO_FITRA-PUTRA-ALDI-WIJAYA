@@ -94,7 +94,7 @@ function Certificates() {
       issuer: "Kampus Merdeka",
       date: "2023",
       image: magangCert,
-      category: "professional",
+      category: ["professional", "security"],
       credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
@@ -103,7 +103,7 @@ function Certificates() {
       issuer: "Kampus Merdeka",
       date: "2023",
       image: msibCert,
-      category: "professional",
+      category: ["professional", "security"],
       credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     },
     {
@@ -159,66 +159,78 @@ function Certificates() {
       image: sertifikatseminarKeamananSiberPeluangdanTantanganCert,
       category: "seminar",
       credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
+    },
+    {
+      id: 14,
+      title: "Sertifikat Wahana",
+      issuer: "Wahana",
+      date: "2023",
+      image: wahanaCert,
+      category: "professional",
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     }
   ];
 
   const filteredCertificates = activeCategory === 'all' 
     ? certificates 
-    : certificates.filter(cert => cert.category === activeCategory);
+    : certificates.filter(cert => 
+        Array.isArray(cert.category) 
+          ? cert.category.includes(activeCategory) 
+          : cert.category === activeCategory);
 
   return (
-    <section id="certificates" className="py-24 bg-gradient-to-b from-dark-950 to-dark-900" ref={certificatesRef}>
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-16">
-          <span className={`text-primary-400 font-medium mb-2 tracking-wider ${isVisible ? 'animate-slideDown' : 'opacity-0'}`}>SERTIFIKAT SAYA</span>
+    <section id="certificates" className="py-32 bg-gradient-to-b from-dark-950 to-dark-900" ref={certificatesRef}>
+      <div className="container mx-auto px-6 md:px-10 lg:px-12">
+        <div className="flex flex-col items-center mb-24">
+          <span className={`text-primary-400 font-medium mb-4 tracking-wider ${isVisible ? 'animate-slideDown' : 'opacity-0'}`}>SERTIFIKAT SAYA</span>
           <h2 className={`font-serif text-4xl md:text-5xl font-bold text-white ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             Pencapaian & Kualifikasi
           </h2>
-          <div className={`w-24 h-1 bg-primary-500 mt-6 rounded-full ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}></div>
+          <div className={`w-24 h-1 bg-primary-500 mt-10 rounded-full ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}></div>
         </div>
         
         {/* Filter buttons */}
-        <div className={`flex justify-center mb-12 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-          <div className="inline-flex bg-dark-800 p-1 rounded-xl overflow-x-auto">
+        <div className={`flex justify-center mb-20 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+          <div className="inline-flex bg-dark-800 p-2 rounded-xl overflow-x-auto">
             <button 
               onClick={() => setActiveCategory('all')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'all' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'all' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Semua
             </button>
             <button 
               onClick={() => setActiveCategory('web')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'web' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'web' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Web Development
             </button>
             <button 
               onClick={() => setActiveCategory('programming')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'programming' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'programming' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Programming
             </button>
             <button 
               onClick={() => setActiveCategory('security')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'security' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'security' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Security
             </button>
             <button 
               onClick={() => setActiveCategory('professional')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'professional' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'professional' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Kompetensi
             </button>
             <button 
               onClick={() => setActiveCategory('organisasi')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'organisasi' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'organisasi' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Organisasi
             </button>
             <button 
               onClick={() => setActiveCategory('seminar')} 
-              className={`px-6 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === 'seminar' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
+              className={`px-6 py-3.5 rounded-lg transition-all duration-300 whitespace-nowrap mx-1 ${activeCategory === 'seminar' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
               Seminar
             </button>
@@ -226,7 +238,7 @@ function Certificates() {
         </div>
         
         {/* Certificates grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {filteredCertificates.map((certificate, index) => (
             <div 
               key={certificate.id} 
@@ -243,25 +255,25 @@ function Certificates() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                   <a 
                     href={certificate.credentialLink} 
-                    className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-medium transform transition-all duration-500 -translate-y-10 group-hover:translate-y-0 hover:shadow-lg hover:shadow-primary-500/20"
+                    className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-medium transform transition-all duration-500 -translate-y-10 group-hover:translate-y-0 hover:shadow-lg hover:shadow-primary-500/20"
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
                     Lihat 
                   </a>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <div className="bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                <div className="absolute top-6 right-6">
+                  <div className="bg-primary-500 text-white text-xs font-bold px-5 py-2 rounded-full shadow-lg">
                     {certificate.date}
                   </div>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-2">
+              <div className="p-8">
+                <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300 flex-1">{certificate.title}</h3>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 rounded-full bg-dark-700 flex items-center justify-center mr-3">
+                <div className="flex items-center mt-3">
+                  <div className="w-10 h-10 rounded-full bg-dark-700 flex items-center justify-center mr-4">
                     <svg className="w-4 h-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                     </svg>
@@ -274,8 +286,8 @@ function Certificates() {
         </div>
         
         {filteredCertificates.length === 0 && (
-          <div className="text-center py-10">
-            <p className="text-white/70">Tidak ada sertifikat yang ditemukan dalam kategori ini.</p>
+          <div className="text-center py-20 my-6">
+            <p className="text-white/70 text-lg">Tidak ada sertifikat yang ditemukan dalam kategori ini.</p>
           </div>
         )}
       </div>

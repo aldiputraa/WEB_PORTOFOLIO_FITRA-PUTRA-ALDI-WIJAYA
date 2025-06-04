@@ -49,13 +49,13 @@ function Navbar({ isScrolled }) {
           
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-1">
-            <NavLink active={activeSection === 'home'} onClick={() => scrollToSection('home')}>Beranda</NavLink>
-            <NavLink active={activeSection === 'about'} onClick={() => scrollToSection('about')}>Tentang</NavLink>
-            <NavLink active={activeSection === 'skills'} onClick={() => scrollToSection('skills')}>Keahlian</NavLink>
-            <NavLink active={activeSection === 'experience'} onClick={() => scrollToSection('experience')}>Pengalaman</NavLink>
-            <NavLink active={activeSection === 'projects'} onClick={() => scrollToSection('projects')}>Proyek</NavLink>
-            <NavLink active={activeSection === 'certificates'} onClick={() => scrollToSection('certificates')}>Sertifikat</NavLink>
-            <NavLink active={activeSection === 'contact'} onClick={() => scrollToSection('contact')}>Kontak</NavLink>
+            <NavLink active={activeSection === 'home'} onClick={() => scrollToSection('home')}>home</NavLink>
+            <NavLink active={activeSection === 'about'} onClick={() => scrollToSection('about')}>about</NavLink>
+            <NavLink active={activeSection === 'skills'} onClick={() => scrollToSection('skills')}>skills</NavLink>
+            <NavLink active={activeSection === 'experience'} onClick={() => scrollToSection('experience')}>experience</NavLink>
+            <NavLink active={activeSection === 'projects'} onClick={() => scrollToSection('projects')}>projects</NavLink>
+            <NavLink active={activeSection === 'certificates'} onClick={() => scrollToSection('certificates')}>certificates</NavLink>
+            <NavLink active={activeSection === 'contact'} onClick={() => scrollToSection('contact')}>contact</NavLink>
           </div>
           
           {/* Mobile menu button */}
@@ -81,13 +81,13 @@ function Navbar({ isScrolled }) {
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex flex-col space-y-4">
-            <MobileNavLink active={activeSection === 'home'} onClick={() => scrollToSection('home')}>Beranda</MobileNavLink>
-            <MobileNavLink active={activeSection === 'about'} onClick={() => scrollToSection('about')}>Tentang</MobileNavLink>
-            <MobileNavLink active={activeSection === 'skills'} onClick={() => scrollToSection('skills')}>Keahlian</MobileNavLink>
-            <MobileNavLink active={activeSection === 'experience'} onClick={() => scrollToSection('experience')}>Pengalaman</MobileNavLink>
-            <MobileNavLink active={activeSection === 'projects'} onClick={() => scrollToSection('projects')}>Proyek</MobileNavLink>
-            <MobileNavLink active={activeSection === 'certificates'} onClick={() => scrollToSection('certificates')}>Sertifikat</MobileNavLink>
-            <MobileNavLink active={activeSection === 'contact'} onClick={() => scrollToSection('contact')}>Kontak</MobileNavLink>
+            <MobileNavLink active={activeSection === 'home'} onClick={() => scrollToSection('home')}>home</MobileNavLink>
+            <MobileNavLink active={activeSection === 'about'} onClick={() => scrollToSection('about')}>about</MobileNavLink>
+            <MobileNavLink active={activeSection === 'skills'} onClick={() => scrollToSection('skills')}>skills</MobileNavLink>
+            <MobileNavLink active={activeSection === 'experience'} onClick={() => scrollToSection('experience')}>experience</MobileNavLink>
+            <MobileNavLink active={activeSection === 'projects'} onClick={() => scrollToSection('projects')}>projects</MobileNavLink>
+            <MobileNavLink active={activeSection === 'certificates'} onClick={() => scrollToSection('certificates')}>certificates</MobileNavLink>
+            <MobileNavLink active={activeSection === 'contact'} onClick={() => scrollToSection('contact')}>contact</MobileNavLink>
           </div>
         </div>
       </div>

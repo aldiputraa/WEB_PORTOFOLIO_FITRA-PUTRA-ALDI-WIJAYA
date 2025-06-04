@@ -72,52 +72,52 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gradient-to-b from-dark-900 to-dark-950" ref={skillsRef}>
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-16">
-          <span className={`text-primary-400 font-medium mb-2 tracking-wider ${isVisible ? 'animate-slideDown' : 'opacity-0'}`}>KEAHLIAN SAYA</span>
+    <section id="skills" className="py-32 bg-gradient-to-b from-dark-900 to-dark-950" ref={skillsRef}>
+      <div className="container mx-auto px-6 md:px-10 lg:px-12">
+        <div className="flex flex-col items-center mb-24">
+          <span className={`text-primary-400 font-medium mb-4 tracking-wider ${isVisible ? 'animate-slideDown' : 'opacity-0'}`}>KEAHLIAN SAYA</span>
           <h2 className={`font-serif text-4xl md:text-5xl font-bold text-white ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             Teknologi & Tools
           </h2>
-          <div className={`w-24 h-1 bg-primary-500 mt-6 rounded-full ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}></div>
+          <div className={`w-24 h-1 bg-primary-500 mt-10 rounded-full ${isVisible ? 'animate-slideDown' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}></div>
         </div>
         
         {/* Main skills with icons */}
-        <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-16 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
+        <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-24 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
           {skills.map((skill, index) => (
             <div 
               key={index} 
-              className="bg-dark-800/50 p-6 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5"
+              className="bg-dark-800/50 p-8 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5"
             >
-              <div className="flex items-center justify-center mb-4">
-                <div className="w-16 h-16 rounded-lg bg-dark-700 p-3 flex items-center justify-center">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-20 h-20 rounded-lg bg-dark-700 p-4 flex items-center justify-center">
                   <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" />
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-medium text-white mt-2">{skill.name}</h3>
+                <h3 className="text-lg font-medium text-white mt-3">{skill.name}</h3>
               </div>
             </div>
           ))}
         </div>
         
         {/* Categories */}
-        <div className={`mb-16 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
-          <h3 className="text-2xl font-serif font-bold text-white mb-8 text-center">Bidang Keahlian</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className={`mb-24 ${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
+          <h3 className="text-2xl font-serif font-bold text-white mb-12 text-center">Bidang Keahlian</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.map((category, index) => (
               <div 
                 key={index}
                 className="bg-dark-800/50 rounded-xl border border-dark-700 overflow-hidden hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5 group"
               >
-                <div className="p-6 border-b border-dark-700 group-hover:border-primary-500/20 transition-colors duration-500">
+                <div className="p-8 border-b border-dark-700 group-hover:border-primary-500/20 transition-colors duration-500">
                   <h4 className="text-xl font-medium text-white">{category.name}</h4>
                 </div>
-                <div className="p-6">
-                  <ul className="space-y-2">
+                <div className="p-8">
+                  <ul className="space-y-3">
                     {category.skills.map((skill, i) => (
                       <li key={i} className="flex items-center text-white/70">
-                        <svg className="w-4 h-4 mr-2 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 mr-3 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {skill}
@@ -132,14 +132,14 @@ function Skills() {
         
         {/* Tools */}
         <div className={`${isVisible ? 'animate-slideUp' : 'opacity-0'}`} style={{ animationDelay: '0.8s' }}>
-          <h3 className="text-2xl font-serif font-bold text-white mb-8 text-center">Tools & Software</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <h3 className="text-2xl font-serif font-bold text-white mb-12 text-center">Tools & Software</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {tools.map((tool, index) => (
               <div 
                 key={index} 
-                className="bg-dark-800/50 p-6 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5 flex flex-col items-center"
+                className="bg-dark-800/50 p-7 rounded-xl border border-dark-700 hover:border-primary-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary-500/5 flex flex-col items-center"
               >
-                <div className="w-16 h-16 mb-4 p-3 rounded-xl bg-dark-700 flex items-center justify-center">
+                <div className="w-18 h-18 mb-5 p-3 rounded-xl bg-dark-700 flex items-center justify-center">
                   <img 
                     src={tool.icon} 
                     alt={tool.name} 

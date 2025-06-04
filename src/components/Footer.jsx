@@ -49,13 +49,13 @@ function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6 text-white">Menu Cepat</h3>
             <ul className="space-y-3">
-              <FooterLink href="#home" text="Beranda" />
-              <FooterLink href="#about" text="Tentang Saya" />
-              <FooterLink href="#skills" text="Keahlian" />
-              <FooterLink href="#experience" text="Pengalaman" />
-              <FooterLink href="#projects" text="Proyek" />
-              <FooterLink href="#certificates" text="Sertifikat" />
-              <FooterLink href="#contact" text="Kontak" />
+              <FooterLink href="#home" text="home" />
+              <FooterLink href="#about" text="about" />
+              <FooterLink href="#skills" text="skills" />
+              <FooterLink href="#experience" text="experience" />
+              <FooterLink href="#projects" text="projects" />
+              <FooterLink href="#certificates" text="certificates" />
+              <FooterLink href="#contact" text="contact" />
             </ul>
           </div>
           
