@@ -152,7 +152,7 @@ function Contact() {
                     </div>
                     <div>
                       <h4 className="text-white font-medium mb-1">Instagram</h4>
-                      <a href="https://www.instagram.com/aldiputraa_" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300">@aldiputraa_</a>
+                      <a href="https://www.instagram.com/aldiputraep_/profilecard/?igsh=dnluaWlyaDlrZHdt" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300">@aldiputraep_</a>
                     </div>
                   </div>
                   
