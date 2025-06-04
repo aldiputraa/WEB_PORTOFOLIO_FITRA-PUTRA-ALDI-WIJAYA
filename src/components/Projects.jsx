@@ -172,13 +172,19 @@ function Projects() {
               style={{ animationDelay: `${0.6 + index * 0.1}s` }}
             >
               <div className="relative overflow-hidden aspect-video">
+                <div className="absolute inset-0 bg-dark-700 animate-pulse"></div>
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 relative z-10"
+                  loading="eager"
+                  decoding="async"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/assets/tools/github.png";
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-20">
                   <div className="flex -translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
                     <a 
                       href={project.codeLink} 
