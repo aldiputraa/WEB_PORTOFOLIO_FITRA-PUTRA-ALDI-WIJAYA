@@ -31,68 +31,44 @@ function Experience() {
   const tabs = {
     work: [
       {
-        title: "CYBERSECURITY: Skill Penting Yang Dibutuhkan Cybersecurity Engineer",
-        company: "PT Gama Multi Usaha Mandiri - Yogyakarta",
-        period: "September 2024 - Desember 2024",
-        description: "1. Virtualization: Installing and configuring VMware, VirtualBox, and Proxmox to simulate virtual environments. 2. Vulnerability Scanning: Using OpenVAS and Arachni to identify vulnerabilities in web applications and networks. 3. Secure Protocol Management: Comparing secure (HTTPS, SSH, SMTPS) and unsecured (HTTP, Telnet, FTP) protocols through wiretapping using Wireshark. 4. Network Segmentation: Implementing VLANs and routing between VLANs using Cisco Packet Tracer. 5. Wireless Security: Using Kismet for site survey and security analysis of Wi-Fi networks. 6. Encryption and Digital Signature: Using PGP for digital signatures and encrypted email communications. 7. Device Management: Installing and testing MDM tools such as Flyve for mobile device management. 8. Hardening Web Server: Configure Apache2-based server to limit access with specific rules according to network needs. 9. Penetration Testing: Conduct testing on web applications owned by the South Sulawesi Province Communication, Informatics, Statistics and Encryption Service using Arachni."
+        title: "Magang Kampus Merdeka",
+        company: "PT. Wahana Cipta Sinatria",
+        period: "Februari 2023 - Juni 2023",
+        description: "Mengembangkan aplikasi berbasis web dan mobile dengan menggunakan teknologi modern seperti React, Flutter, dan Firebase. Berkolaborasi dalam tim untuk menyelesaikan proyek client dengan metodologi Agile."
       },
       {
-        title: "Warehouse Staff",
-        company: "Telkom Indonesia - Yogyakarta",
-        period: "September 2021",
-        description: "Menjaga kelancaran distribusi serta penataan barang di dalam gudang penyimpanan. Penempatan barang sesuai dengan daftar, data, sekaligus memastikan stock opname berjalan dengan semestinya."
-      },
-      {
-        title: "Management Access Data",
-        company: "Telkom Indonesia - Yogyakarta",
-        period: "September 2021 - November 2021",
-        description: "Melakukan pengecekan dan menyesuaikan data customer, input data, dan tugas lainnya."
-      },
-      {
-        title: "Freelance",
-        company: "SG Computer - Yogyakarta",
-        period: "2021",
-        description: "Menjaga stand pameran dan melakukan instalasi Windows."
+        title: "Freelance Web Developer",
+        company: "Self-employed",
+        period: "Januari 2022 - Sekarang",
+        description: "Merancang dan mengembangkan website untuk berbagai klien dengan fokus pada UI/UX yang menarik dan responsif. Mengimplementasikan solusi e-commerce dan sistem manajemen konten."
       }
     ],
     education: [
       {
-        title: "S1 Teknik Komputer",
-        institution: "Universitas Teknologi Digital Indonesia (UTDI)",
-        period: "September 2022 - Sekarang",
-        description: "GPA: 3.83/4.00. Pembuatan web himpunan dan project pembuatan IoT."
+        title: "Sarjana Teknik Informatika",
+        institution: "Universitas Teknologi Digital Indonesia",
+        period: "2021 - 2025",
+        description: "Fokus pada pengembangan aplikasi web dan mobile, keamanan siber, dan Internet of Things (IoT). Aktif dalam berbagai proyek penelitian dan kompetisi pemrograman."
       },
       {
-        title: "Teknik Komputer Jaringan",
-        institution: "SMK N 1 Bantul",
-        period: "Mei 2019 - Juni 2022",
-        description: "Instalasi jaringan komputer, splicing, crimping kabel LAN, konfigurasi mikrotik."
+        title: "SMK Jurusan Teknik Komputer dan Jaringan",
+        institution: "SMK Negeri 1 Bantul",
+        period: "2018 - 2021",
+        description: "Mempelajari dasar-dasar jaringan komputer, pemrograman, dan perakitan komputer. Berpartisipasi dalam berbagai kompetisi tingkat daerah dan nasional."
       }
     ],
     organization: [
       {
-        title: "Ketua Umum",
-        company: "Himpunan Teknik Komputer - HIMATEK",
-        period: "Agustus 2023 - Agustus 2024",
-        description: "Memimpin dan mengelola himpunan mahasiswa, mewakili himpunan dalam berbagai pertemuan, mengkoordinasikan kegiatan, dan memperkuat ikatan kekeluargaan antar mahasiswa Teknik Komputer."
+        title: "Ketua Divisi Teknologi",
+        company: "Himpunan Mahasiswa Teknik Informatika - UTDI",
+        period: "September 2022 - Agustus 2023",
+        description: "Memimpin tim dalam pengembangan website organisasi, mengelola infrastruktur teknologi untuk kegiatan kampus, dan mengadakan workshop teknologi untuk mahasiswa."
       },
       {
-        title: "Departemen Minat dan Bakat",
-        company: "UKM WAMIKA - UTDI",
-        period: "Agustus 2023 - Agustus 2024",
-        description: "Merencanakan, mengatur dan melaksanakan kegiatan yang berkaitan dengan minat dan bakat mahasiswa Islam."
-      },
-      {
-        title: "Penanggung Jawab",
-        company: "Bakti Sosial Panti Asuhan Ulil Albab - Yogyakarta",
-        period: "April 2023",
-        description: "Menyalurkan bantuan kepada masyarakat yang membutuhkan, menumbuhkan kepedulian terhadap sesama, dan menjalin silaturahmi antar anggota."
-      },
-      {
-        title: "Penanggung Jawab",
-        company: "LATIHAN KADER HIMATEK UTDI",
-        period: "November 2023",
-        description: "Melakukan kaderisasi di internal HIMATEK UTDI, mengembangkan keterampilan kepemimpinan, dan membangun rasa identitas anggota."
+        title: "Anggota",
+        company: "Google Developer Student Clubs - UTDI",
+        period: "Oktober 2021 - Sekarang",
+        description: "Berpartisipasi dalam berbagai workshop dan hackathon, mengembangkan keterampilan kepemimpinan, dan membangun rasa identitas anggota."
       },
       {
         title: "Departemen Minat dan Bakat",
