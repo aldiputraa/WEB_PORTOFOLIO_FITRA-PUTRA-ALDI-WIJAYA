@@ -60,14 +60,14 @@ function Experience() {
     organization: [
       {
         title: "Ketua Divisi Teknologi",
-        company: "Himpunan Mahasiswa Teknik Informatika - UTDI",
-        period: "September 2022 - Agustus 2023",
+        company: "Himpunan Mahasiswa Teknik Komputer - UTDI",
+        period: "September 2023 - Agustus 2024",
         description: "Memimpin tim dalam pengembangan website organisasi, mengelola infrastruktur teknologi untuk kegiatan kampus, dan mengadakan workshop teknologi untuk mahasiswa."
       },
       {
-        title: "Anggota",
-        company: "Google Developer Student Clubs - UTDI",
-        period: "Oktober 2021 - Sekarang",
+        title: "Penanggungjawab",
+        company: "Latian kader - UTDI",
+        period: "September 2023 - Agustus 2024",
         description: "Berpartisipasi dalam berbagai workshop dan hackathon, mengembangkan keterampilan kepemimpinan, dan membangun rasa identitas anggota."
       },
       {
