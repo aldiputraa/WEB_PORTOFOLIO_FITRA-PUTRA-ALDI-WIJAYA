@@ -1,7 +1,6 @@
 export default {
   plugins: {
-    // Nonaktifkan tailwindcss untuk sementara
-    // '@tailwindcss/postcss': {},
+    tailwindcss: {},
     autoprefixer: {},
   },
 }

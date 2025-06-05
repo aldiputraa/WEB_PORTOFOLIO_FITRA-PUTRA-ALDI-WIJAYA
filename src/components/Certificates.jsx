@@ -1,18 +1,18 @@
 import { useState, useEffect, useRef } from 'react'
-import cloudAWS from '../../assets/sertifikat/Belajar Dasar Cloud dan Gen AI di AWS.png'
-import sqlCert from '../../assets/sertifikat/Belajar Dasar Structured Query Language (SQL).png'
-import dataVis from '../../assets/sertifikat/Belajar Dasar Visualisasi Data.png'
-import pythonCert from '../../assets/sertifikat/Memulai Pemrograman dengan Python.png'
-import kompetensiCert from '../../assets/sertifikat/sertifikat kompetensi.png'
-import magangCert from '../../assets/sertifikat/Sertifikat magang.png'
-import msibCert from '../../assets/sertifikat/Sertifikat MSIB .png'
-import keamananCert from '../../assets/sertifikat/sertifikat seminar Keamanan Siber Peluang dan Tantangan.png'
-import sertifikatbestgrupmagangCert from '../../assets/sertifikat/sertifikat best grup magang.jpg'
-import jointerCert from '../../assets/sertifikat/jointer.jpg'
-import sertifikathimaCert from '../../assets/sertifikat/sertifikat hima.png'
-import sertifikatukmwamikaCert from '../../assets/sertifikat/sertifikat-ukm-wamika.png'
-import sertifikatseminarKeamananSiberPeluangdanTantanganCert from '../../assets/sertifikat/sertifikat seminar Keamanan Siber Peluang dan Tantangan.png'
-import wahanaCert from '../../assets/sertifikat/wahana.jpg' 
+import cloudAWS from '/assets/sertifikat/Belajar Dasar Cloud dan Gen AI di AWS.png'
+import sqlCert from '/assets/sertifikat/Belajar Dasar Structured Query Language (SQL).png'
+import dataVis from '/assets/sertifikat/Belajar Dasar Visualisasi Data.png'
+import pythonCert from '/assets/sertifikat/Memulai Pemrograman dengan Python.png'
+import kompetensiCert from '/assets/sertifikat/sertifikat kompetensi.png'
+import magangCert from '/assets/sertifikat/Sertifikat magang.png'
+import msibCert from '/assets/sertifikat/Sertifikat MSIB .png'
+import keamananCert from '/assets/sertifikat/sertifikat seminar Keamanan Siber Peluang dan Tantangan.png'
+import sertifikatbestgrupmagangCert from '/assets/sertifikat/sertifikat best grup magang.jpg'
+import jointerCert from '/assets/sertifikat/jointer.jpg'
+import sertifikathimaCert from '/assets/sertifikat/sertifikat hima.png'
+import sertifikatukmwamikaCert from '/assets/sertifikat/sertifikat-ukm-wamika.png'
+import sertifikatseminarKeamananSiberPeluangdanTantanganCert from '/assets/sertifikat/sertifikat seminar Keamanan Siber Peluang dan Tantangan.png'
+import wahanaCert from '/assets/sertifikat/wahana.jpg' 
 
 function Certificates() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -21,6 +21,12 @@ function Certificates() {
   
   // Intersection Observer to trigger animation when section is visible
   useEffect(() => {
+    // Fallback untuk browser yang tidak mendukung Intersection Observer
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true);
+      return;
+    }
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -301,4 +307,4 @@ function Certificates() {
   );
 }
 
-export default Certificates;
+export default Certificates

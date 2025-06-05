@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react'
-import './index.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Certificates from './components/Certificates'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { useState, useEffect } from 'react';
+import './index.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Certificates from './components/Certificates';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
+  // 1. Panggil SEMUA useState di awal
   const [isLoading, setIsLoading] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false); // <-- Pindahkan ke sini
 
+  // 2. Panggil SEMUA useEffect setelah semua useState
   useEffect(() => {
     // Preload gambar penting
     const preloadImages = () => {
@@ -41,8 +44,22 @@ function App() {
     }, 1000);
     
     return () => clearTimeout(timer);
-  }, []);
+  }, []); // Dependency array kosong, hanya jalan sekali saat mount
 
+  useEffect(() => { // <-- Pindahkan ke sini
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []); // Dependency array kosong, hanya setup listener sekali
+
+  // 3. Baru lakukan kondisional return setelah SEMUA Hook dipanggil
   if (isLoading) {
     return (
       <div className="fixed inset-0 bg-dark-950 flex items-center justify-center z-50">
@@ -54,21 +71,7 @@ function App() {
     );
   }
 
-  const [isScrolled, setIsScrolled] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  // 4. Return utama komponen jika tidak loading
   return (
     <>
       <Navbar isScrolled={isScrolled} />
@@ -81,7 +84,7 @@ function App() {
       <Contact />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

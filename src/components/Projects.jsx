@@ -7,6 +7,12 @@ function Projects() {
   
   // Intersection Observer to trigger animation when section is visible
   useEffect(() => {
+    // Fallback untuk browser yang tidak mendukung Intersection Observer
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true);
+      return;
+    }
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
