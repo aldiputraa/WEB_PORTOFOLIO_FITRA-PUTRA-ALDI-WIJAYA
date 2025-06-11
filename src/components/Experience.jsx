@@ -40,26 +40,21 @@ function Experience() {
         title: "CYBERSECURITY: Skill Penting Yang Dibutuhkan Cybersecurity Engineer",
         company: "PT Gama Multi Usaha Mandiri - Yogyakarta",
         period: "Sep 2024 - Dec 2024",
-        description: "Virtualization: Installing and configuring VMware, VirtualBox, and Proxmox. Vulnerability Scanning: Using OpenVAS & Arachni for vulnerability detection. Protocol Security: Analysis of HTTPS, SSH, SMTPS vs HTTP, Telnet, FTP using Wireshark. Network Segmentation: Implementing VLANs & routing between VLANs (Cisco Packet Tracer). Wi-Fi Security: Surveying & analyzing wireless networks using Kismet. Encryption & Digital Signature: Implementing PGP for encrypted email & digital signatures. Device Management (MDM): Testing MDM tools like Flyve. Server Hardening: Configuring Apache2 security & ACL based access restrictions. Penetration Testing: Testing web applications (XSS, SQLi, Missing Headers), PoC exploits & mitigation recommendations."
+        description: "• Virtualisasi: Menginstal dan mengkonfigurasi VMware, VirtualBox, dan Proxmox.\n• Pemindaian Kerentanan: Menggunakan OpenVAS & Arachni untuk deteksi kerentanan.\n• Keamanan Protokol: Analisis HTTPS, SSH, SMTPS vs HTTP, Telnet, FTP menggunakan Wireshark.\n• Segmentasi Jaringan: Implementasi VLAN & routing antar VLAN (Cisco Packet Tracer).\n• Keamanan Wi-Fi: Survei & analisis jaringan nirkabel menggunakan Kismet.\n• Enkripsi & Tanda Tangan Digital: Implementasi PGP untuk email terenkripsi.\n• Manajemen Perangkat (MDM): Pengujian alat MDM seperti Flyve.\n• Pengerasan Server: Konfigurasi keamanan Apache2 & pembatasan akses berbasis ACL.\n• Pengujian Penetrasi: Pengujian aplikasi web (XSS, SQLi, Header Hilang), eksploitasi PoC & rekomendasi mitigasi."
       },
       {
         title: "Warehouse Staff",
         company: "Telkom Indonesia - Yogyakarta",
         period: "Sep 2021 - Oct 2021",
-        description: "Maintain the smooth distribution and arrangement of goods in the storage warehouse. Apart from that, the placement of goods is in accordance with the list and data, as well as ensuring that stock taking travels properly."
+        description: "Menjaga kelancaran distribusi dan pengaturan barang di gudang penyimpanan. Selain itu, penempatan barang sesuai dengan daftar dan data, serta memastikan stock taking berjalan dengan baik."
       },
       {
         title: "Data Access Management",
         company: "Telkom Indonesia - Yogyakarta",
         period: "Sep 2021 - Oct 2021",
-        description: "Perform checking and adjusting customer data, input data, and other related tasks."
+        description: "Melakukan pengecekan dan penyesuaian data pelanggan, input data, dan tugas-tugas terkait lainnya."
       },
-      {
-        title: "Freelance Web Developer",
-        company: "Self-employed",
-        period: "Januari 2022 - Sekarang",
-        description: "Merancang dan mengembangkan website untuk berbagai klien dengan fokus pada UI/UX yang menarik dan responsif. Mengimplementasikan solusi e-commerce dan sistem manajemen konten."
-      }
+     
     ],
     education: [
       {
