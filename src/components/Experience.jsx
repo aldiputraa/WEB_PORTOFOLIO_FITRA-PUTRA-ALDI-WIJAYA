@@ -37,10 +37,22 @@ function Experience() {
   const tabs = {
     work: [
       {
-        title: "Studi independen",
-        company: "PT Gama Multi Usaha Mandiri",
+        title: "CYBERSECURITY: Skill Penting Yang Dibutuhkan Cybersecurity Engineer",
+        company: "PT Gama Multi Usaha Mandiri - Yogyakarta",
         period: "Sep 2024 - Dec 2024",
-        description: "Virtualisasi: Menginstal dan mengonfigurasi VMware, VirtualBox, dan Proxmox. Pemindaian Kerentanan: Menggunakan OpenVAS & Arachni untuk mendeteksi kerentanan. Keamanan Protokol: Analisis HTTPS, SSH, SMTPS vs HTTP, Telnet, FTP menggunakan Wireshark. Segmentasi Jaringan: Menerapkan VLAN & perutean antar VLAN (Cisco Packet Tracer). Keamanan Wi-Fi: Survei & analisis jaringan nirkabel menggunakan Kismet. Enkripsi & Tanda Tangan Digital: Menerapkan PGP untuk email terenkripsi & tanda tangan digital. Manajemen Perangkat (MDM): Menguji alat MDM seperti Flyve. Pengerasan Server: Mengonfigurasi keamanan Apache2 & pembatasan akses berbasis ACL. Pengujian Penetrasi: Menguji aplikasi web (XSS, SQLi, Header Hilang), eksploitasi PoC & rekomendasi mitigasi."
+        description: "Virtualization: Installing and configuring VMware, VirtualBox, and Proxmox. Vulnerability Scanning: Using OpenVAS & Arachni for vulnerability detection. Protocol Security: Analysis of HTTPS, SSH, SMTPS vs HTTP, Telnet, FTP using Wireshark. Network Segmentation: Implementing VLANs & routing between VLANs (Cisco Packet Tracer). Wi-Fi Security: Surveying & analyzing wireless networks using Kismet. Encryption & Digital Signature: Implementing PGP for encrypted email & digital signatures. Device Management (MDM): Testing MDM tools like Flyve. Server Hardening: Configuring Apache2 security & ACL based access restrictions. Penetration Testing: Testing web applications (XSS, SQLi, Missing Headers), PoC exploits & mitigation recommendations."
+      },
+      {
+        title: "Warehouse Staff",
+        company: "Telkom Indonesia - Yogyakarta",
+        period: "Sep 2021 - Oct 2021",
+        description: "Maintain the smooth distribution and arrangement of goods in the storage warehouse. Apart from that, the placement of goods is in accordance with the list and data, as well as ensuring that stock taking travels properly."
+      },
+      {
+        title: "Data Access Management",
+        company: "Telkom Indonesia - Yogyakarta",
+        period: "Sep 2021 - Oct 2021",
+        description: "Perform checking and adjusting customer data, input data, and other related tasks."
       },
       {
         title: "Freelance Web Developer",
@@ -103,7 +115,7 @@ function Experience() {
               onClick={() => setActiveTab('work')} 
               className={`px-8 py-4 rounded-lg transition-all duration-300 font-medium ${activeTab === 'work' ? 'bg-primary-600 text-white shadow-lg' : 'text-white/70 hover:text-white hover:bg-dark-700'}`}
             >
-              Pekerjaan
+              Pengalaman kerja
             </button>
             <button 
               onClick={() => setActiveTab('education')} 
