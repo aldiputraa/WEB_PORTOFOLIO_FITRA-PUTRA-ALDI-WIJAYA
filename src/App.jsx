@@ -78,8 +78,8 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Projects />
       <Experience />
+      <Projects />
       <Certificates />
       <Contact />
       <Footer />
