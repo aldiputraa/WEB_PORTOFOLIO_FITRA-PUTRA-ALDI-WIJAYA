@@ -37,10 +37,10 @@ function Experience() {
   const tabs = {
     work: [
       {
-        title: "Magang Kampus Merdeka",
-        company: "PT. Wahana Cipta Sinatria",
-        period: "Februari 2023 - Juni 2023",
-        description: "Mengembangkan aplikasi berbasis web dan mobile dengan menggunakan teknologi modern seperti React, Flutter, dan Firebase. Berkolaborasi dalam tim untuk menyelesaikan proyek client dengan metodologi Agile."
+        title: "Studi independen",
+        company: "PT Gama Multi Usaha Mandiri",
+        period: "Sep 2024 - Dec 2024",
+        description: "Virtualisasi: Menginstal dan mengonfigurasi VMware, VirtualBox, dan Proxmox. Pemindaian Kerentanan: Menggunakan OpenVAS & Arachni untuk mendeteksi kerentanan. Keamanan Protokol: Analisis HTTPS, SSH, SMTPS vs HTTP, Telnet, FTP menggunakan Wireshark. Segmentasi Jaringan: Menerapkan VLAN & perutean antar VLAN (Cisco Packet Tracer). Keamanan Wi-Fi: Survei & analisis jaringan nirkabel menggunakan Kismet. Enkripsi & Tanda Tangan Digital: Menerapkan PGP untuk email terenkripsi & tanda tangan digital. Manajemen Perangkat (MDM): Menguji alat MDM seperti Flyve. Pengerasan Server: Mengonfigurasi keamanan Apache2 & pembatasan akses berbasis ACL. Pengujian Penetrasi: Menguji aplikasi web (XSS, SQLi, Header Hilang), eksploitasi PoC & rekomendasi mitigasi."
       },
       {
         title: "Freelance Web Developer",
