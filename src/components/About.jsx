@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { FaCode, FaLaptopCode, FaServer } from 'react-icons/fa'
 
 function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,38 +40,18 @@ function About() {
         
         <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className={`w-full sm:w-4/5 md:w-3/4 lg:w-2/5 mx-auto lg:mx-0 mb-8 lg:mb-0 ${isVisible ? 'animate-slideRight' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-2xl opacity-50 blur-lg"></div>
-              <div className="relative overflow-hidden rounded-2xl border-2 border-dark-800 bg-dark-800">
-                {/* Profile Image with Frame */}
-                <div className="p-3">
-                  <div className="overflow-hidden rounded-xl aspect-[4/5] relative">
-                    <img 
-                      src="/assets/profile.jpg" 
-                      alt="Fitra Putra Aldi Wijaya" 
-                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                      loading="lazy"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark-950/90 to-transparent p-4">
-                      <p className="text-white font-medium text-center">Fitra Putra Aldi Wijaya</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Experience Cards */}
-                <div className="grid grid-cols-2 gap-2 p-3 bg-dark-900/50">
-                  <div className="flex flex-col items-center justify-center p-2 sm:p-3 rounded-lg bg-dark-800 border border-dark-700 hover:border-primary-500/50 transition-all">
-                    <FaLaptopCode className="text-primary-400 text-lg sm:text-xl mb-1 sm:mb-2" />
-                    <span className="text-lg sm:text-xl font-bold text-white">10+</span>
-                    <span className="text-xs text-white/70 text-center">Proyek Selesai</span>
-                  </div>
-                  <div className="flex flex-col items-center justify-center p-2 sm:p-3 rounded-lg bg-dark-800 border border-dark-700 hover:border-primary-500/50 transition-all">
-                    <FaServer className="text-primary-400 text-lg sm:text-xl mb-1 sm:mb-2" />
-                    <span className="text-lg sm:text-xl font-bold text-white">5+</span>
-                    <span className="text-xs text-white/70 text-center">Teknologi</span>
-                  </div>
-                </div>
+            <div className="flex justify-center">
+              <div className="overflow-hidden rounded-full w-72 h-72 sm:w-80 sm:h-80 relative border-4 border-primary-500/30 shadow-lg shadow-primary-500/20">
+                <img 
+                  src="/assets/profile.jpg" 
+                  alt="Fitra Putra Aldi Wijaya" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                  loading="lazy"
+                />
               </div>
+            </div>
+            <div className="text-center mt-4">
+              <p className="text-white font-medium text-xl">Fitra Putra Aldi Wijaya</p>
             </div>
           </div>
           

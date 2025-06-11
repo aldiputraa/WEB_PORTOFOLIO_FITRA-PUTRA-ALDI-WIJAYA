@@ -57,7 +57,7 @@ function Hero() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="w-full md:w-3/5 animate-slideRight">
               <p className="text-secondary-400 font-medium mb-4 tracking-wider">SELAMAT DATANG DI PORTOFOLIO SAYA</p>
-              <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight text-white">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
                 Halo, Saya <span className="text-primary-400 inline-block relative">
                   Fitra Putra Aldi Wijaya
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary-400 rounded-full"></span>
