@@ -13,6 +13,7 @@ import sertifikathimaCert from '/assets/sertifikat/sertifikat hima.png'
 import sertifikatukmwamikaCert from '/assets/sertifikat/sertifikat-ukm-wamika.png'
 import sertifikatseminarKeamananSiberPeluangdanTantanganCert from '/assets/sertifikat/sertifikat seminar Keamanan Siber Peluang dan Tantangan.png'
 import wahanaCert from '/assets/sertifikat/wahana.jpg' 
+import javascriptCert from '/assets/sertifikat/Belajar Dasar Pemrograman JavaScript.png'
 // No errors found in the code. The code appears to be a well-structured React component that:
 
 function Certificates() {
@@ -174,6 +175,15 @@ function Certificates() {
       date: "2023",
       image: wahanaCert,
       category: "professional",
+      credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
+    },
+    {
+      id: 15,
+      title: "Belajar Dasar Pemrograman JavaScript",
+      issuer: "Dicoding",
+      date: "2023",
+      image: javascriptCert,
+      category: "programming",
       credentialLink: "https://drive.google.com/drive/folders/1T0dM-da1ykrfuDJ7n1L6fFRvQAHWaL9-?usp=sharing"
     }
   ];
